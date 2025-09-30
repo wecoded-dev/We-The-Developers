@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="We The Developers - Empowering developers worldwide with premium free resources, tools, and knowledge to accelerate growth and success in the tech industry.">
+    <meta name="keywords" content="developer resources, programming tools, coding tutorials, free developer assets, web development, coding resources, developer community">
+    <meta name="author" content="We The Developers">
+    <title>We The Developers | Premium Free Resources for Developers</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-yellow: #FFEAA7;
+            --light-yellow: #FFF9E6;
+            --dark-yellow: #FDCB6E;
+            --golden-yellow: #FFD700;
+            --black: #1a1a1a;
+            --dark-black: #0d0d0d;
+            --white: #FFFFFF;
+            --soft-white: #f8f9fa;
+            --soft-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --strong-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            --transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+            --transition-slow: all 1s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--light-yellow);
+            color: var(--black);
+            overflow-x: hidden;
+            line-height: 1.7;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--light-yellow);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--dark-yellow);
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--golden-yellow);
+        }
+
+        /* Preloader */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--light-yellow);
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .loader {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 5px solid rgba(253, 203, 110, 0.3);
+            border-top-color: var(--dark-yellow);
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Header & Navigation */
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: var(--soft-shadow);
+            padding: 1.2rem 0;
+            transition: var(--transition);
+        }
+
+        .navbar.scrolled {
+            padding: 0.8rem 0;
+            background-color: rgba(255, 255, 255, 0.98);
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: var(--black);
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-brand i {
+            color: var(--dark-yellow);
+            margin-right: 10px;
+            transition: var(--transition);
+        }
+
+        .navbar-brand:hover i {
+            transform: rotate(15deg);
+        }
+
+        .nav-link {
+            font-weight: 500;
+            margin: 0 10px;
+            color: var(--black);
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .nav-link:hover {
+            color: var(--dark-yellow);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background: linear-gradient(90deg, var(--dark-yellow), var(--golden-yellow));
+            transition: var(--transition);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, var(--light-yellow) 0%, var(--primary-yellow) 100%);
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            z-index: 2;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            background: linear-gradient(135deg, var(--black) 0%, var(--dark-yellow) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            color: #555;
+            max-width: 600px;
+        }
+
+        .btn-primary-custom {
+            background: linear-gradient(135deg, var(--black) 0%, #333 100%);
+            color: var(--white);
+            border: none;
+            padding: 15px 35px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary-custom::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--dark-yellow) 0%, var(--golden-yellow) 100%);
+            transition: var(--transition);
+            z-index: -1;
+        }
+
+        .btn-primary-custom:hover {
+            color: var(--black);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-primary-custom:hover::before {
+            left: 0;
+        }
+
+        .btn-secondary-custom {
+            background: transparent;
+            color: var(--black);
+            border: 2px solid var(--dark-yellow);
+            padding: 13px 33px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .btn-secondary-custom:hover {
+            background: var(--dark-yellow);
+            color: var(--black);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Floating Elements */
+        .floating-element {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: var(--soft-shadow);
+            backdrop-filter: blur(5px);
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .floating-element:hover {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: var(--strong-shadow);
+        }
+
+        .floating-element i {
+            font-size: 2rem;
+            color: var(--dark-yellow);
+            margin-bottom: 10px;
+        }
+
+        .floating-element:nth-child(1) {
+            top: 15%;
+            left: 8%;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .floating-element:nth-child(2) {
+            top: 65%;
+            right: 8%;
+            animation: float 10s ease-in-out infinite 1s;
+        }
+
+        .floating-element:nth-child(3) {
+            bottom: 15%;
+            left: 15%;
+            animation: float 12s ease-in-out infinite 2s;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-25px) rotate(5deg);
+            }
+            100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+        }
+
+        /* About Section */
+        .about {
+            padding: 120px 0;
+            background-color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 5px;
+            background: linear-gradient(90deg, var(--dark-yellow), var(--golden-yellow));
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 5px;
+        }
+
+        .about-card {
+            background: var(--soft-white);
+            border-radius: 20px;
+            padding: 40px 30px;
+            box-shadow: var(--soft-shadow);
+            transition: var(--transition);
+            height: 100%;
+            border-top: 5px solid transparent;
+            background-clip: padding-box;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--dark-yellow), var(--golden-yellow));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: var(--transition);
+        }
+
+        .about-card:hover {
+            transform: translateY(-15px);
+            box-shadow: var(--strong-shadow);
+        }
+
+        .about-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .about-icon {
+            font-size: 3.5rem;
+            color: var(--dark-yellow);
+            margin-bottom: 25px;
+            transition: var(--transition);
+        }
+
+        .about-card:hover .about-icon {
+            transform: scale(1.2) rotate(10deg);
+        }
+
+        /* Resources Section */
+        .resources {
+            padding: 120px 0;
+            background: linear-gradient(135deg, var(--light-yellow) 0%, var(--primary-yellow) 100%);
+            position: relative;
+        }
+
+        .resource-card {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--soft-shadow);
+            transition: var(--transition);
+            margin-bottom: 30px;
+            position: relative;
+            height: 100%;
+        }
+
+        .resource-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(253, 203, 110, 0.1) 0%, rgba(255, 255, 255, 0) 100%);
+            z-index: 1;
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .resource-card:hover {
+            transform: translateY(-15px);
+            box-shadow: var(--strong-shadow);
+        }
+
+        .resource-card:hover::before {
+            opacity: 1;
+        }
+
+        .resource-img {
+            height: 220px;
+            background: linear-gradient(135deg, var(--dark-yellow) 0%, var(--golden-yellow) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .resource-img i {
+            z-index: 2;
+            position: relative;
+        }
+
+        .resource-content {
+            padding: 30px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 120px 0;
+            background-color: var(--white);
+            position: relative;
+        }
+
+        .testimonial-card {
+            background: var(--soft-white);
+            border-radius: 20px;
+            padding: 40px 30px;
+            box-shadow: var(--soft-shadow);
+            margin: 15px;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 6rem;
+            color: rgba(253, 203, 110, 0.1);
+            font-family: 'Playfair Display', serif;
+            line-height: 1;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--strong-shadow);
+        }
+
+        .testimonial-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 3px solid var(--dark-yellow);
+            transition: var(--transition);
+        }
+
+        .testimonial-card:hover .testimonial-img {
+            transform: scale(1.1);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 25px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--black);
+        }
+
+        .testimonial-role {
+            color: #777;
+            font-size: 0.9rem;
+        }
+
+        /* Newsletter */
+        .newsletter {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--primary-yellow) 0%, var(--dark-yellow) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .newsletter::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.1" d="M0,128L48,144C96,160,192,192,288,186.7C384,181,480,139,576,138.7C672,139,768,181,864,181.3C960,181,1056,139,1152,138.7C1248,139,1344,181,1392,202.7L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .newsletter-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .newsletter-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: var(--strong-shadow);
+            backdrop-filter: blur(10px);
+        }
+
+        .form-control-custom {
+            border: none;
+            border-radius: 50px;
+            padding: 15px 25px;
+            box-shadow: var(--soft-shadow);
+            transition: var(--transition);
+        }
+
+        .form-control-custom:focus {
+            box-shadow: 0 0 0 3px rgba(253, 203, 110, 0.3);
+        }
+
+        /* Footer */
+        .footer {
+            background: linear-gradient(135deg, var(--black) 0%, #333 100%);
+            color: var(--white);
+            padding: 80px 0 30px;
+            position: relative;
+        }
+
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--dark-yellow), var(--golden-yellow));
+        }
+
+        .footer-logo {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .footer-logo i {
+            color: var(--dark-yellow);
+        }
+
+        .footer p {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            margin-bottom: 12px;
+            display: block;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--dark-yellow);
+            padding-left: 8px;
+        }
+
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 45px;
+            height: 45px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 45px;
+            margin-right: 12px;
+            transition: var(--transition);
+        }
+
+        .social-icons a:hover {
+            background-color: var(--dark-yellow);
+            transform: translateY(-5px);
+            color: var(--black);
+        }
+
+        .copyright {
+            margin-top: 60px;
+            padding-top: 25px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* Particles Container */
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        /* Three.js Container */
+        #three-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+            
+            .section-title {
+                font-size: 2.5rem;
+            }
+            
+            .floating-element {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-code"></i> We The Developers
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#resources">Resources</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#testimonials">Testimonials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#newsletter">Newsletter</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <!-- Particles Container -->
+        <div id="particles-js"></div>
+        
+        <!-- Three.js Container -->
+        <div id="three-container"></div>
+        
+        <!-- Floating Elements -->
+        <div class="floating-element">
+            <i class="fas fa-laptop-code"></i>
+            <span>Code</span>
+        </div>
+        <div class="floating-element">
+            <i class="fas fa-mobile-alt"></i>
+            <span>Mobile</span>
+        </div>
+        <div class="floating-element">
+            <i class="fas fa-server"></i>
+            <span>Backend</span>
+        </div>
+        
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <h1 data-aos="fade-up" data-aos-duration="1000">Empowering Developers With <span style="display: block; margin-top: 10px;">Free Premium Resources</span></h1>
+                        <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">We provide high-quality development resources, tools, and knowledge directly to your inbox. Join thousands of developers who are accelerating their growth with our curated content.</p>
+                        <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                            <a href="#newsletter" class="btn btn-primary-custom me-3">Get Free Resources</a>
+                            <a href="#about" class="btn btn-secondary-custom">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="text-center" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="600">
+                        <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_vybwn7df.json" background="transparent" speed="1" style="width: 100%; height: 500px;" loop autoplay></lottie-player>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up" data-aos-duration="1000">About We The Developers</h2>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="about-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                        <div class="about-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3>Our Mission</h3>
+                        <p>To empower developers worldwide by providing free, high-quality resources that accelerate learning and professional growth in the ever-evolving tech landscape.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="about-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                        <div class="about-icon">
+                            <i class="fas fa-gift"></i>
+                        </div>
+                        <h3>What We Offer</h3>
+                        <p>Curated coding resources, premium development tools, in-depth tutorials, cheat sheets, and industry insights delivered directly to your inbox weekly.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="about-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+                        <div class="about-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Our Community</h3>
+                        <p>Join a thriving community of 50,000+ developers who share knowledge, collaborate on projects, and support each other's growth in our exclusive network.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section class="resources" id="resources">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up" data-aos-duration="1000">Premium Resources</h2>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="resource-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                        <div class="resource-img">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="resource-content">
+                            <h4>Code Snippets Library</h4>
+                            <p>Access hundreds of reusable, optimized code snippets for various programming languages and frameworks to speed up your development.</p>
+                            <a href="#" class="btn btn-primary-custom mt-3">Explore Library</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="resource-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                        <div class="resource-img">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <div class="resource-content">
+                            <h4>UI Component Library</h4>
+                            <p>Beautiful, responsive UI components and templates built with modern frameworks to accelerate your frontend development.</p>
+                            <a href="#" class="btn btn-primary-custom mt-3">Browse Components</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="resource-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+                        <div class="resource-img">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <div class="resource-content">
+                            <h4>Developer Tools</h4>
+                            <p>Collection of premium tools for debugging, testing, optimizing, and deploying your applications with efficiency.</p>
+                            <a href="#" class="btn btn-primary-custom mt-3">Discover Tools</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up" data-aos-duration="1000">What Developers Say</h2>
+            <div class="row">
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Johnson" class="testimonial-img">
+                        <p class="testimonial-text">"The resources from We The Developers have been invaluable to my growth as a frontend developer. The weekly emails always contain something useful that I can apply immediately!"</p>
+                        <p class="testimonial-author">Sarah Johnson</p>
+                        <p class="testimonial-role">Frontend Developer at TechCorp</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen" class="testimonial-img">
+                        <p class="testimonial-text">"As a busy full-stack developer, I don't have time to search for quality resources. We The Developers delivers exactly what I need right to my inbox. It's like having a personal research assistant!"</p>
+                        <p class="testimonial-author">Michael Chen</p>
+                        <p class="testimonial-role">Full-Stack Developer at DevStudio</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="testimonial-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Priya Patel" class="testimonial-img">
+                        <p class="testimonial-text">"The code snippets and tutorials have saved me countless hours. This is by far the most valuable developer resource I've subscribed to. The quality is consistently exceptional."</p>
+                        <p class="testimonial-author">Priya Patel</p>
+                        <p class="testimonial-role">Mobile App Developer at AppWorks</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter" id="newsletter">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <div class="newsletter-content">
+                        <h2 class="section-title text-white" data-aos="fade-up" data-aos-duration="1000">Get Premium Resources Delivered</h2>
+                        <p class="text-white mb-5" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Join our newsletter and receive curated development resources, tools, and insights every week. No spam, just value.</p>
+                        
+                        <form class="newsletter-form" id="newsletterForm" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                            <div class="mb-3">
+                                <input type="text" class="form-control form-control-custom" id="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="mb-4">
+                                <input type="email" class="form-control form-control-custom" id="email" placeholder="Enter your email address" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary-custom w-100">Subscribe Now</button>
+                            <div class="form-text text-center mt-3">
+                                <i class="fas fa-lock me-2"></i>We respect your privacy. Unsubscribe at any time.
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-5">
+                    <div class="footer-logo">
+                        <i class="fas fa-code me-2"></i>We The Developers
+                    </div>
+                    <p>Empowering developers worldwide with premium free resources, tools, and knowledge to accelerate growth and success in the tech industry.</p>
+                    <div class="social-icons mt-4">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-5">
+                    <h5>Quick Links</h5>
+                    <div class="footer-links">
+                        <a href="#home">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#resources">Resources</a>
+                        <a href="#testimonials">Testimonials</a>
+                        <a href="#newsletter">Newsletter</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-5">
+                    <h5>Resources</h5>
+                    <div class="footer-links">
+                        <a href="#">Code Snippets</a>
+                        <a href="#">UI Components</a>
+                        <a href="#">Developer Tools</a>
+                        <a href="#">Tutorials</a>
+                        <a href="#">Cheat Sheets</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-5">
+                    <h5>Contact</h5>
+                    <div class="footer-links">
+                        <a href="mailto:hello@wethedevelopers.com">hello@wethedevelopers.com</a>
+                        <a href="#">Support Center</a>
+                        <a href="#">Submit Resource</a>
+                        <a href="#">Partnerships</a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 We The Developers. All rights reserved. | Crafted with <i class="fas fa-heart" style="color: var(--dark-yellow);"></i> for developers</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/velocity/2.0.6/velocity.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Preloader
+        window.addEventListener('load', function() {
+            const preloader = document.getElementById('preloader');
+            gsap.to(preloader, {
+                opacity: 0,
+                duration: 0.8,
+                onComplete: function() {
+                    preloader.style.display = 'none';
+                }
+            });
+        });
+
+        $(document).ready(function() {
+            // Navbar background on scroll
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 50) {
+                    $('.navbar').addClass('scrolled');
+                } else {
+                    $('.navbar').removeClass('scrolled');
+                }
+            });
+
+            // Smooth scrolling
+            $('a.nav-link, .btn-primary-custom, .btn-secondary-custom').on('click', function(e) {
+                if (this.hash !== '') {
+                    e.preventDefault();
+                    const hash = this.hash;
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top - 70
+                    }, 800);
+                }
+            });
+
+            // Particles.js initialization
+            particlesJS('particles-js', {
+                particles: {
+                    number: { value: 80, density: { enable: true, value_area: 800 } },
+                    color: { value: "#FDCB6E" },
+                    shape: { type: "circle" },
+                    opacity: { value: 0.5, random: true },
+                    size: { value: 3, random: true },
+                    line_linked: {
+                        enable: true,
+                        distance: 150,
+                        color: "#FDCB6E",
+                        opacity: 0.2,
+                        width: 1
+                    },
+                    move: {
+                        enable: true,
+                        speed: 2,
+                        direction: "none",
+                        random: true,
+                        straight: false,
+                        out_mode: "out",
+                        bounce: false
+                    }
+                },
+                interactivity: {
+                    detect_on: "canvas",
+                    events: {
+                        onhover: { enable: true, mode: "repulse" },
+                        onclick: { enable: true, mode: "push" },
+                        resize: true
+                    }
+                }
+            });
+
+            // Three.js scene
+            const threeContainer = document.getElementById('three-container');
+            const scene = new THREE.Scene();
+            const camera = new THREE.PerspectiveCamera(75, threeContainer.clientWidth / threeContainer.clientHeight, 0.1, 1000);
+            const renderer = new THREE.WebGLRenderer({ alpha: true });
+            
+            renderer.setSize(threeContainer.clientWidth, threeContainer.clientHeight);
+            threeContainer.appendChild(renderer.domElement);
+            
+            // Create floating geometric shapes
+            const geometry = new THREE.TetrahedronGeometry(2, 0);
+            const material = new THREE.MeshBasicMaterial({ 
+                color: 0xFDCB6E, 
+                wireframe: true,
+                transparent: true,
+                opacity: 0.3
+            });
+            
+            const shapes = [];
+            for (let i = 0; i < 5; i++) {
+                const shape = new THREE.Mesh(geometry, material);
+                shape.position.x = Math.random() * 20 - 10;
+                shape.position.y = Math.random() * 20 - 10;
+                shape.position.z = Math.random() * 10 - 20;
+                shape.rotation.x = Math.random() * Math.PI;
+                shape.rotation.y = Math.random() * Math.PI;
+                shapes.push(shape);
+                scene.add(shape);
+            }
+            
+            camera.position.z = 5;
+            
+            // Animation loop
+            function animate() {
+                requestAnimationFrame(animate);
+                
+                shapes.forEach(shape => {
+                    shape.rotation.x += 0.005;
+                    shape.rotation.y += 0.005;
+                });
+                
+                renderer.render(scene, camera);
+            }
+            
+            animate();
+
+            // GSAP animations
+            gsap.registerPlugin(ScrollTrigger);
+            
+            // Animate elements on scroll
+            gsap.utils.toArray('.about-card, .resource-card, .testimonial-card').forEach(card => {
+                gsap.fromTo(card, {
+                    y: 50,
+                    opacity: 0
+                }, {
+                    y: 0,
+                    opacity: 1,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 80%",
+                        end: "bottom 20%",
+                        toggleActions: "play none none reverse"
+                    }
+                });
+            });
+
+            // Anime.js animations for floating elements
+            anime({
+                targets: '.floating-element',
+                translateY: [-20, 20],
+                duration: 3000,
+                easing: 'easeInOutSine',
+                direction: 'alternate',
+                loop: true
+            });
+
+            // Newsletter form submission with Web3Forms
+            $('#newsletterForm').on('submit', function(e) {
+                e.preventDefault();
+                
+                const name = $('#name').val();
+                const email = $('#email').val();
+                
+                // In a real implementation, you would send this to Web3Forms
+                // For demo purposes, we'll simulate a successful submission
+                
+                // Show success animation
+                const submitBtn = $(this).find('button[type="submit"]');
+                const originalText = submitBtn.html();
+                
+                submitBtn.html('<i class="fas fa-spinner fa-spin"></i> Subscribing...');
+                submitBtn.prop('disabled', true);
+                
+                setTimeout(() => {
+                    submitBtn.html('<i class="fas fa-check"></i> Subscribed!');
+                    submitBtn.removeClass('btn-primary-custom').addClass('btn-success');
+                    
+                    // Reset form
+                    $('#newsletterForm')[0].reset();
+                    
+                    // Show success message with anime.js
+                    anime({
+                        targets: '.newsletter-form',
+                        scale: [1, 1.05, 1],
+                        duration: 800,
+                        easing: 'easeInOutQuad'
+                    });
+                    
+                    // Reset button after delay
+                    setTimeout(() => {
+                        submitBtn.html(originalText);
+                        submitBtn.prop('disabled', false);
+                        submitBtn.removeClass('btn-success').addClass('btn-primary-custom');
+                    }, 3000);
+                }, 1500);
+            });
+
+            // Velocity.js animation for navbar brand on hover
+            $('.navbar-brand').hover(function() {
+                Velocity(this, { rotateZ: "15deg" }, { duration: 300 });
+            }, function() {
+                Velocity(this, { rotateZ: "0deg" }, { duration: 300 });
+            });
+        });
+
+        // Handle window resize for Three.js
+        window.addEventListener('resize', function() {
+            const threeContainer = document.getElementById('three-container');
+            camera.aspect = threeContainer.clientWidth / threeContainer.clientHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(threeContainer.clientWidth, threeContainer.clientHeight);
+        });
+    </script>
+</body>
+</html>
