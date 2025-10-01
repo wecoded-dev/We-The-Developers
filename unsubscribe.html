@@ -1,0 +1,775 @@
+<style>
+/* Import premium fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Source+Serif+Pro:wght@300;400;600&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css');
+
+/* Ultra Premium Unsubscribe Container */
+#ultra-premium-unsubscribe {
+    font-family: 'Inter', sans-serif;
+    max-width: 460px;
+    margin: 40px auto;
+    padding: 50px 45px;
+    border-radius: 36px;
+    background: linear-gradient(165deg, 
+        rgba(255, 255, 255, 0.95) 0%, 
+        rgba(253, 253, 253, 0.98) 30%, 
+        rgba(250, 250, 250, 0.92) 100%);
+    box-shadow: 
+        0 35px 80px rgba(0, 0, 0, 0.12),
+        0 20px 50px rgba(0, 0, 0, 0.08),
+        0 8px 25px rgba(0, 0, 0, 0.04),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.03);
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    border: 1.5px solid rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(30px);
+}
+
+/* Premium Metallic Border */
+#ultra-premium-unsubscribe::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 8px;
+    background: linear-gradient(90deg, 
+        #FFE8A3 0%, 
+        #FFDF7A 15%, 
+        #FFD95A 30%, 
+        #E8B732 45%,
+        #D4A116 60%,
+        #E8B732 75%,
+        #FFD95A 90%, 
+        #FFE8A3 100%);
+    z-index: 3;
+    border-radius: 36px 36px 0 0;
+    box-shadow: 0 2px 10px rgba(255, 217, 90, 0.3);
+}
+
+/* Sophisticated Background Elements */
+.unsubscribe-bg-orb-1 {
+    position: absolute;
+    top: -180px;
+    right: -180px;
+    width: 360px;
+    height: 360px;
+    background: radial-gradient(circle, 
+        rgba(255, 236, 179, 0.35) 0%, 
+        rgba(255, 236, 179, 0.2) 25%, 
+        rgba(255, 236, 179, 0.1) 50%, 
+        transparent 75%);
+    border-radius: 50%;
+    z-index: -1;
+    animation: gentleFloat 12s ease-in-out infinite;
+    filter: blur(15px);
+}
+
+.unsubscribe-bg-orb-2 {
+    position: absolute;
+    bottom: -120px;
+    left: -120px;
+    width: 280px;
+    height: 280px;
+    background: radial-gradient(circle, 
+        rgba(255, 245, 220, 0.25) 0%, 
+        rgba(255, 245, 220, 0.15) 35%, 
+        transparent 70%);
+    border-radius: 50%;
+    z-index: -1;
+    animation: gentleFloat 15s ease-in-out infinite reverse;
+    filter: blur(12px);
+}
+
+/* Premium Header with Emotional Design */
+.unsubscribe-premium-header {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.emotional-icon-container {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.emotional-icon-aura {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    background: conic-gradient(
+        from 0deg at 50% 50%,
+        rgba(255, 232, 163, 0.3) 0deg,
+        rgba(255, 217, 90, 0.2) 90deg,
+        rgba(255, 201, 42, 0.15) 180deg,
+        rgba(255, 232, 163, 0.25) 270deg,
+        rgba(255, 232, 163, 0.3) 360deg
+    );
+    border-radius: 50%;
+    animation: rotateAura 25s linear infinite;
+    filter: blur(8px);
+}
+
+.emotional-icon-main {
+    font-size: 46px;
+    color: #D4A116;
+    background: linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.95) 0%, 
+        rgba(252, 252, 252, 0.98) 100%);
+    width: 90px;
+    height: 90px;
+    border-radius: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 
+        0 20px 45px rgba(212, 161, 22, 0.25),
+        0 8px 25px rgba(212, 161, 22, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9),
+        inset 0 -1px 0 rgba(212, 161, 22, 0.1);
+    backdrop-filter: blur(15px);
+    border: 1.5px solid rgba(255, 255, 255, 0.8);
+    position: relative;
+    z-index: 1;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.emotional-icon-container:hover .emotional-icon-main {
+    transform: scale(1.05) rotate(5deg);
+    color: #B8860B;
+}
+
+.unsubscribe-premium-header h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 34px;
+    background: linear-gradient(135deg, 
+        #2D2D2D 0%, 
+        #4A4A4A 30%, 
+        #5A5A5A 70%, 
+        #2D2D2D 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 16px;
+    letter-spacing: -0.8px;
+    line-height: 1.3;
+    position: relative;
+}
+
+.unsubscribe-premium-header h3::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        #FFD95A 50%, 
+        transparent 100%);
+    border-radius: 2px;
+}
+
+.unsubscribe-premium-header p {
+    color: #666;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.7;
+    max-width: 380px;
+    margin: 0 auto;
+    opacity: 0.85;
+    font-family: 'Source Serif Pro', serif;
+}
+
+/* Ultra Premium Input Fields */
+.unsubscribe-form-group {
+    margin-bottom: 32px;
+    position: relative;
+}
+
+.ultra-premium-input-wrapper {
+    position: relative;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.ultra-premium-input {
+    width: 100%;
+    height: 68px;
+    padding: 0 65px 0 28px;
+    border: 2.5px solid transparent;
+    background: linear-gradient(135deg, 
+        rgba(255, 255, 255, 0.95) 0%, 
+        rgba(252, 252, 252, 0.98) 100%);
+    border-radius: 22px;
+    font-size: 17px;
+    font-weight: 400;
+    color: #333;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 
+        0 12px 40px rgba(0, 0, 0, 0.06),
+        0 4px 20px rgba(0, 0, 0, 0.03),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.02);
+    backdrop-filter: blur(15px);
+    font-family: 'Inter', sans-serif;
+}
+
+.ultra-premium-input:focus {
+    outline: none;
+    border-color: #FFD95A;
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 
+        0 20px 50px rgba(255, 217, 90, 0.3),
+        0 8px 30px rgba(255, 217, 90, 0.2),
+        0 0 0 5px rgba(255, 217, 90, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.95);
+    transform: translateY(-3px);
+    padding-left: 32px;
+}
+
+.ultra-premium-input::placeholder {
+    color: #AAA;
+    font-weight: 400;
+    transition: all 0.3s ease;
+}
+
+.ultra-premium-input:focus::placeholder {
+    color: #CCC;
+    transform: translateX(5px);
+}
+
+.ultra-premium-input-icon {
+    position: absolute;
+    right: 28px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #DDD;
+    font-size: 22px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 2;
+}
+
+.ultra-premium-input:focus + .ultra-premium-input-icon {
+    color: #D4A116;
+    transform: translateY(-50%) scale(1.15);
+    filter: drop-shadow(0 2px 4px rgba(212, 161, 22, 0.3));
+}
+
+/* Emotional Reasons Selection */
+.reasons-section {
+    margin: 35px 0;
+    padding: 28px;
+    background: linear-gradient(135deg, 
+        rgba(255, 253, 245, 0.6) 0%, 
+        rgba(255, 251, 235, 0.4) 100%);
+    border-radius: 20px;
+    border: 1.5px solid rgba(255, 248, 225, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+.reasons-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #5A5A5A;
+    margin-bottom: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.reasons-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.reason-option {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 18px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 16px;
+    border: 1.5px solid transparent;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+}
+
+.reason-option:hover {
+    background: rgba(255, 255, 255, 0.9);
+    border-color: rgba(255, 217, 90, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.reason-option input {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid #E0E0E0;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.reason-option input:checked {
+    background: #FFD95A;
+    border-color: #FFD95A;
+}
+
+.reason-option input:checked::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
+}
+
+.reason-option label {
+    color: #666;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+    line-height: 1.4;
+    flex: 1;
+}
+
+/* Ultra Premium Unsubscribe Button */
+.ultra-premium-unsubscribe-btn {
+    width: 100%;
+    height: 70px;
+    background: linear-gradient(135deg, 
+        rgba(255, 217, 90, 0.9) 0%, 
+        rgba(255, 201, 42, 0.8) 50%, 
+        rgba(212, 161, 22, 0.7) 100%);
+    border: none;
+    border-radius: 22px;
+    color: #2D2D2D;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 
+        0 18px 50px rgba(212, 161, 22, 0.4),
+        0 8px 30px rgba(212, 161, 22, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.5),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: -0.3px;
+}
+
+.ultra-premium-unsubscribe-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(255, 255, 255, 0.6), 
+        transparent);
+    transition: all 0.8s;
+}
+
+.ultra-premium-unsubscribe-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 
+        0 25px 60px rgba(212, 161, 22, 0.5),
+        0 12px 35px rgba(212, 161, 22, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    background: linear-gradient(135deg, 
+        #FFD95A 0%, 
+        #FFC92A 50%, 
+        #E8B732 100%);
+}
+
+.ultra-premium-unsubscribe-btn:hover::before {
+    left: 100%;
+}
+
+.ultra-premium-unsubscribe-btn:active {
+    transform: translateY(-1px);
+}
+
+.ultra-premium-unsubscribe-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Emotional Messages */
+.ultra-emotional-message {
+    display: none;
+    padding: 24px 28px;
+    border-radius: 20px;
+    margin-top: 28px;
+    font-size: 16px;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    line-height: 1.6;
+    animation: emotionalAppear 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+.ultra-emotional-success {
+    background: linear-gradient(135deg, 
+        rgba(129, 199, 132, 0.15) 0%, 
+        rgba(102, 187, 106, 0.1) 100%);
+    color: #2e7d32;
+    border: 1.5px solid rgba(129, 199, 132, 0.3);
+    box-shadow: 0 12px 35px rgba(129, 199, 132, 0.2);
+}
+
+.ultra-emotional-error {
+    background: linear-gradient(135deg, 
+        rgba(239, 154, 154, 0.15) 0%, 
+        rgba(239, 83, 80, 0.1) 100%);
+    color: #c62828;
+    border: 1.5px solid rgba(239, 154, 154, 0.3);
+    box-shadow: 0 12px 35px rgba(239, 154, 154, 0.2);
+}
+
+/* Premium Footer */
+.ultra-premium-footer {
+    text-align: center;
+    margin-top: 32px;
+    font-size: 14px;
+    color: #999;
+    line-height: 1.6;
+    opacity: 0.8;
+    font-family: 'Source Serif Pro', serif;
+    font-style: italic;
+}
+
+/* Advanced Animations */
+@keyframes gentleFloat {
+    0%, 100% { 
+        transform: translateY(0px) rotate(0deg) scale(1); 
+    }
+    33% { 
+        transform: translateY(-15px) rotate(1deg) scale(1.02); 
+    }
+    66% { 
+        transform: translateY(10px) rotate(-1deg) scale(0.98); 
+    }
+}
+
+@keyframes rotateAura {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes emotionalAppear {
+    0% { 
+        opacity: 0; 
+        transform: translateY(30px) scale(0.9); 
+    }
+    60% { 
+        opacity: 1; 
+        transform: translateY(-5px) scale(1.02); 
+    }
+    100% { 
+        opacity: 1; 
+        transform: translateY(0) scale(1); 
+    }
+}
+
+@keyframes gentlePulse {
+    0%, 100% { 
+        box-shadow: 0 18px 50px rgba(212, 161, 22, 0.4); 
+    }
+    50% { 
+        box-shadow: 0 18px 55px rgba(212, 161, 22, 0.5); 
+    }
+}
+
+/* Responsive Excellence */
+@media (max-width: 576px) {
+    #ultra-premium-unsubscribe {
+        padding: 40px 30px;
+        margin: 30px 20px;
+        border-radius: 32px;
+    }
+    
+    .unsubscribe-premium-header h3 {
+        font-size: 30px;
+    }
+    
+    .ultra-premium-input, .ultra-premium-unsubscribe-btn {
+        height: 64px;
+    }
+    
+    .emotional-icon-main {
+        width: 80px;
+        height: 80px;
+        font-size: 40px;
+    }
+    
+    .emotional-icon-aura {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .reasons-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .reasons-section {
+        padding: 24px 20px;
+    }
+}
+</style>
+
+<div id="ultra-premium-unsubscribe">
+    <div class="unsubscribe-bg-orb-1"></div>
+    <div class="unsubscribe-bg-orb-2"></div>
+    
+    <div class="unsubscribe-premium-header">
+        <div class="emotional-icon-container">
+            <div class="emotional-icon-aura"></div>
+            <div class="emotional-icon-main">
+                <i class="bi bi-heartbreak"></i>
+            </div>
+        </div>
+        <h3>We're Sad to See You Go</h3>
+        <p>Your presence meant the world to us. Help us understand how we can improve.</p>
+    </div>
+    
+    <form id="ultraPremiumUnsubscribeForm">
+        <input type="hidden" name="access_key" value="91518187-55af-467c-9690-8d7994a937ca">
+        <input type="hidden" name="subject" value="Premium Unsubscribe Request">
+        <input type="hidden" name="from_name" value="Premium Unsubscribe">
+        <input type="checkbox" name="botcheck" style="display: none;">
+        
+        <div class="unsubscribe-form-group">
+            <div class="ultra-premium-input-wrapper">
+                <input type="email" class="ultra-premium-input" id="ultraPremiumEmail" name="email" placeholder="Your registered email address" required>
+                <i class="bi bi-envelope-heart ultra-premium-input-icon"></i>
+            </div>
+        </div>
+        
+        <div class="reasons-section">
+            <div class="reasons-title">
+                <i class="bi bi-chat-heart"></i>
+                <span>Help us understand why</span>
+            </div>
+            <div class="reasons-grid">
+                <div class="reason-option">
+                    <input type="radio" id="reason1" name="unsubscribe_reason" value="too_many_emails">
+                    <label for="reason1">Too many emails</label>
+                </div>
+                <div class="reason-option">
+                    <input type="radio" id="reason2" name="unsubscribe_reason" value="content_not_relevant">
+                    <label for="reason2">Content not relevant</label>
+                </div>
+                <div class="reason-option">
+                    <input type="radio" id="reason3" name="unsubscribe_reason" value="privacy_concerns">
+                    <label for="reason3">Privacy concerns</label>
+                </div>
+                <div class="reason-option">
+                    <input type="radio" id="reason4" name="unsubscribe_reason" value="other">
+                    <label for="reason4">Other reasons</label>
+                </div>
+            </div>
+        </div>
+        
+        <div class="unsubscribe-form-group">
+            <div class="ultra-premium-input-wrapper">
+                <input type="text" class="ultra-premium-input" id="ultraPremiumFeedback" name="feedback" placeholder="Any final thoughts or suggestions? (Optional)">
+                <i class="bi bi-pencil-square ultra-premium-input-icon"></i>
+            </div>
+        </div>
+        
+        <button type="submit" class="ultra-premium-unsubscribe-btn" id="ultraPremiumUnsubscribeBtn">
+            <span class="submit-text">
+                <i class="bi bi-heart"></i>
+                Continue with Love
+            </span>
+            <span class="loading-text" style="display: none;">
+                <i class="bi bi-arrow-repeat spinning"></i>
+                Processing with Care...
+            </span>
+        </button>
+        
+        <div class="ultra-emotional-message ultra-emotional-success" id="ultraEmotionalSuccess">
+            <i class="bi bi-flower1"></i>
+            <div>
+                <strong>Thank you for your honesty</strong><br>
+                We've processed your request with love. You'll be missed.
+            </div>
+        </div>
+        
+        <div class="ultra-emotional-message ultra-emotional-error" id="ultraEmotionalError">
+            <i class="bi bi-cloud-rain"></i>
+            <div>
+                <strong>We encountered an issue</strong><br>
+                Please check your email and try again. We're here to help.
+            </div>
+        </div>
+    </form>
+    
+    <div class="ultra-premium-footer">
+        <p>"Every ending makes room for a new beginning. Thank you for being part of our journey."</p>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('ultraPremiumUnsubscribeForm');
+    const submitBtn = document.getElementById('ultraPremiumUnsubscribeBtn');
+    const submitText = submitBtn.querySelector('.submit-text');
+    const loadingText = submitBtn.querySelector('.loading-text');
+    const successMessage = document.getElementById('ultraEmotionalSuccess');
+    const errorMessage = document.getElementById('ultraEmotionalError');
+    
+    // Add premium animations
+    const style = document.createElement('style');
+    style.textContent = `
+        .spinning {
+            animation: spin 1.4s linear infinite;
+        }
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Enhanced input focus effects */
+        .ultra-premium-input-wrapper:focus-within {
+            transform: translateY(-3px);
+        }
+        
+        /* Emotional button pulse */
+        .emotional-pulse {
+            animation: gentlePulse 2s ease-in-out infinite;
+        }
+    `;
+    document.head.appendChild(style);
+    
+    // Premium input interactions
+    const inputs = form.querySelectorAll('.ultra-premium-input');
+    inputs.forEach(input => {
+        input.addEventListener('focus', function() {
+            this.parentElement.style.transform = 'translateY(-3px)';
+            this.style.background = 'rgba(255, 255, 255, 0.98)';
+        });
+        
+        input.addEventListener('blur', function() {
+            this.parentElement.style.transform = 'translateY(0)';
+            
+            // Emotional validation styling
+            if (this.value && this.checkValidity()) {
+                this.style.borderColor = '#81C784';
+                this.style.background = 'linear-gradient(135deg, rgba(129, 199, 132, 0.05) 0%, rgba(255, 255, 255, 0.95) 100%)';
+            } else if (this.value && !this.checkValidity()) {
+                this.style.borderColor = '#EF9A9A';
+                this.style.background = 'linear-gradient(135deg, rgba(239, 154, 154, 0.05) 0%, rgba(255, 255, 255, 0.95) 100%)';
+            }
+        });
+    });
+    
+    // Emotional form submission
+    form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        if (!form.checkValidity()) {
+            // Emotional validation feedback
+            const emailInput = document.getElementById('ultraPremiumEmail');
+            emailInput.style.borderColor = '#EF9A9A';
+            emailInput.style.background = 'linear-gradient(135deg, rgba(239, 154, 154, 0.1) 0%, rgba(255, 255, 255, 0.95) 100%)';
+            emailInput.focus();
+            return;
+        }
+        
+        // Show emotional loading state
+        submitText.style.display = 'none';
+        loadingText.style.display = 'flex';
+        submitBtn.disabled = true;
+        submitBtn.style.animation = 'gentlePulse 2s infinite';
+        
+        // Hide previous messages
+        successMessage.style.display = 'none';
+        errorMessage.style.display = 'none';
+        
+        try {
+            const formData = new FormData(form);
+            
+            const response = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: formData
+            });
+            
+            const result = await response.json();
+            
+            if (result.success) {
+                successMessage.style.display = 'flex';
+                form.reset();
+                
+                // Reset emotional styling
+                inputs.forEach(input => {
+                    input.style.borderColor = 'transparent';
+                    input.style.background = 'linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(252, 252, 252, 0.98) 100%)';
+                });
+                
+                // Emotional success animation
+                submitBtn.innerHTML = '<i class="bi bi-check-lg"></i> Request Completed';
+                setTimeout(() => {
+                    submitBtn.innerHTML = submitText.outerHTML;
+                }, 3000);
+            } else {
+                errorMessage.style.display = 'flex';
+                console.error('Emotional submission error:', result);
+            }
+        } catch (error) {
+            errorMessage.style.display = 'flex';
+            console.error('Network emotional error:', error);
+        } finally {
+            submitText.style.display = 'flex';
+            loadingText.style.display = 'none';
+            submitBtn.disabled = false;
+            submitBtn.style.animation = 'none';
+        }
+    });
+    
+    // Emotional reason selection enhancement
+    const reasonOptions = document.querySelectorAll('.reason-option');
+    reasonOptions.forEach(option => {
+        option.addEventListener('click', function() {
+            const radio = this.querySelector('input[type="radio"]');
+            radio.checked = true;
+            
+            // Emotional selection feedback
+            reasonOptions.forEach(opt => {
+                opt.style.background = 'rgba(255, 255, 255, 0.7)';
+                opt.style.borderColor = 'transparent';
+            });
+            
+            this.style.background = 'rgba(255, 248, 225, 0.8)';
+            this.style.borderColor = 'rgba(255, 217, 90, 0.5)';
+        });
+    });
+});
+</script>
