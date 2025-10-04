@@ -1,0 +1,749 @@
+<!-- Hire Section for We The Developers Agency -->
+<section id="hire-section" class="hire-section">
+  <!-- Background Elements -->
+  <div id="particles-js"></div>
+  <div class="background-shapes">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+  </div>
+  
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="content-wrapper">
+          <div class="badge">Hire Us</div>
+          <h1 class="main-title">Let's Build Something <span class="highlight">Amazing</span> Together</h1>
+          <p class="description">
+            At <strong>We The Developers</strong>, we transform ideas into stunning digital experiences. 
+            Our expertise in <span class="highlight-text">graphics design</span> and <span class="highlight-text">front-end development</span> 
+            helps businesses stand out with professional designs and cutting-edge websites.
+          </p>
+          
+          <div class="services-section">
+            <h3>Our Services</h3>
+            <div class="services-grid">
+              <div class="service-card">
+                <i class="material-icons">design_services</i>
+                <h4>Professional Documents</h4>
+                <p>Business reports, presentations, and all types of professional documents</p>
+              </div>
+              <div class="service-card">
+                <i class="material-icons">videocam</i>
+                <h4>Promotional Videos</h4>
+                <p>Engaging video content that captures your brand's essence</p>
+              </div>
+              <div class="service-card">
+                <i class="material-icons">web</i>
+                <h4>Front-End Development</h4>
+                <p>Responsive, modern websites with exceptional user experience</p>
+              </div>
+              <div class="service-card">
+                <i class="material-icons">palette</i>
+                <h4>Creative Designs</h4>
+                <p>Logos, branding materials, and all your design needs</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="cta-section">
+            <h3>Ready to elevate your business?</h3>
+            <p>Contact us today to discuss your project</p>
+            <div class="contact-info">
+              <i class="material-icons">email</i>
+              <span>support@aquascript.xyz</span>
+            </div>
+            <button class="cta-button">
+              <span>Get Us Hired</span>
+              <i class="material-icons">arrow_forward</i>
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="visual-section">
+          <div class="floating-card card-1">
+            <div class="card-icon">
+              <i class="material-icons">code</i>
+            </div>
+            <h4>Clean Code</h4>
+            <p>Modern, efficient front-end solutions</p>
+          </div>
+          
+          <div class="floating-card card-2">
+            <div class="card-icon">
+              <i class="material-icons">brush</i>
+            </div>
+            <h4>Beautiful Designs</h4>
+            <p>Visually stunning graphics</p>
+          </div>
+          
+          <div class="floating-card card-3">
+            <div class="card-icon">
+              <i class="material-icons">devices</i>
+            </div>
+            <h4>Responsive</h4>
+            <p>Perfect on all devices</p>
+          </div>
+          
+          <div class="animation-container" id="animation-container"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Include all required libraries -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.0.7/dist/lenis.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+
+<!-- Styles -->
+<style>
+  /* Import Google Fonts */
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
+  @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+  @import url('https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css');
+  
+  /* Base Styles */
+  .hire-section {
+    position: relative;
+    padding: 100px 0;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+  }
+  
+  /* Background Shapes */
+  .background-shapes .shape {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.1;
+  }
+  
+  .background-shapes .shape-1 {
+    width: 300px;
+    height: 300px;
+    background: #FFD700;
+    top: -150px;
+    right: -150px;
+  }
+  
+  .background-shapes .shape-2 {
+    width: 200px;
+    height: 200px;
+    background: #333;
+    bottom: -100px;
+    left: -100px;
+  }
+  
+  .background-shapes .shape-3 {
+    width: 150px;
+    height: 150px;
+    background: #FFD700;
+    top: 50%;
+    right: 10%;
+  }
+  
+  /* Content Styles */
+  .content-wrapper {
+    position: relative;
+    z-index: 10;
+  }
+  
+  .badge {
+    display: inline-block;
+    background: #FFD700;
+    color: #333;
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+  }
+  
+  .main-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    color: #222;
+  }
+  
+  .highlight {
+    color: #FFD700;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .highlight:after {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: rgba(255, 215, 0, 0.3);
+    z-index: -1;
+  }
+  
+  .description {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    margin-bottom: 40px;
+    color: #555;
+  }
+  
+  .highlight-text {
+    color: #FFD700;
+    font-weight: 600;
+  }
+  
+  /* Services Section */
+  .services-section {
+    margin: 50px 0;
+  }
+  
+  .services-section h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    color: #222;
+  }
+  
+  .services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  
+  .service-card {
+    background: white;
+    border-radius: 12px;
+    padding: 25px 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  
+  .service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  .service-card i {
+    font-size: 2.5rem;
+    color: #FFD700;
+    margin-bottom: 15px;
+  }
+  
+  .service-card h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #222;
+  }
+  
+  .service-card p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.5;
+  }
+  
+  /* CTA Section */
+  .cta-section {
+    background: white;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    margin-top: 40px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  
+  .cta-section h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #222;
+  }
+  
+  .cta-section p {
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .contact-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    padding: 15px;
+    background: rgba(255, 215, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  .contact-info i {
+    color: #FFD700;
+    margin-right: 10px;
+    font-size: 1.5rem;
+  }
+  
+  .contact-info span {
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .cta-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFD700;
+    color: #333;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+    width: 100%;
+  }
+  
+  .cta-button:hover {
+    background: #ffc400;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4);
+  }
+  
+  .cta-button i {
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .cta-button:hover i {
+    transform: translateX(5px);
+  }
+  
+  /* Visual Section */
+  .visual-section {
+    position: relative;
+    height: 600px;
+  }
+  
+  .floating-card {
+    position: absolute;
+    background: white;
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    text-align: center;
+    z-index: 5;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+  }
+  
+  .card-1 {
+    top: 10%;
+    right: 10%;
+  }
+  
+  .card-2 {
+    top: 40%;
+    right: 30%;
+  }
+  
+  .card-3 {
+    bottom: 20%;
+    right: 15%;
+  }
+  
+  .card-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 215, 0, 0.15);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+  }
+  
+  .card-icon i {
+    font-size: 2rem;
+    color: #FFD700;
+  }
+  
+  .floating-card h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: #222;
+  }
+  
+  .floating-card p {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  .animation-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  
+  /* Particles Container */
+  #particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 992px) {
+    .main-title {
+      font-size: 2.8rem;
+    }
+    
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .visual-section {
+      height: 400px;
+      margin-top: 50px;
+    }
+    
+    .floating-card {
+      width: 180px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hire-section {
+      padding: 70px 0;
+    }
+    
+    .main-title {
+      font-size: 2.3rem;
+    }
+    
+    .description {
+      font-size: 1.1rem;
+    }
+  }
+</style>
+
+<!-- JavaScript -->
+<script>
+  // Initialize Lenis for smooth scrolling
+  const lenis = new Lenis({
+    duration: 1.2,
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    direction: 'vertical',
+    gestureDirection: 'vertical',
+    smooth: true,
+    smoothTouch: false,
+    touchMultiplier: 2,
+  });
+  
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+  
+  requestAnimationFrame(raf);
+  
+  // Initialize Particles.js
+  document.addEventListener('DOMContentLoaded', function() {
+    if (typeof particlesJS !== 'undefined') {
+      particlesJS('particles-js', {
+        particles: {
+          number: {
+            value: 40,
+            density: {
+              enable: true,
+              value_area: 800
+            }
+          },
+          color: {
+            value: "#FFD700"
+          },
+          shape: {
+            type: "circle",
+            stroke: {
+              width: 0,
+              color: "#000000"
+            }
+          },
+          opacity: {
+            value: 0.3,
+            random: true,
+            anim: {
+              enable: true,
+              speed: 1,
+              opacity_min: 0.1,
+              sync: false
+            }
+          },
+          size: {
+            value: 3,
+            random: true,
+            anim: {
+              enable: true,
+              speed: 2,
+              size_min: 0.1,
+              sync: false
+            }
+          },
+          line_linked: {
+            enable: true,
+            distance: 150,
+            color: "#FFD700",
+            opacity: 0.2,
+            width: 1
+          },
+          move: {
+            enable: true,
+            speed: 1,
+            direction: "none",
+            random: true,
+            straight: false,
+            out_mode: "out",
+            bounce: false,
+            attract: {
+              enable: false,
+              rotateX: 600,
+              rotateY: 1200
+            }
+          }
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: {
+              enable: true,
+              mode: "grab"
+            },
+            onclick: {
+              enable: true,
+              mode: "push"
+            },
+            resize: true
+          },
+          modes: {
+            grab: {
+              distance: 140,
+              line_linked: {
+                opacity: 0.4
+              }
+            },
+            push: {
+              particles_nb: 4
+            }
+          }
+        },
+        retina_detect: true
+      });
+    }
+    
+    // Initialize Three.js animation
+    initThreeAnimation();
+    
+    // Animate elements with Anime.js
+    animateElements();
+  });
+  
+  // Three.js Animation
+  function initThreeAnimation() {
+    const container = document.getElementById('animation-container');
+    if (!container) return;
+    
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+    
+    renderer.setSize(container.clientWidth, container.clientHeight);
+    renderer.setClearColor(0x000000, 0);
+    container.appendChild(renderer.domElement);
+    
+    // Create geometric shapes
+    const geometry1 = new THREE.TorusGeometry(10, 3, 16, 100);
+    const material1 = new THREE.MeshBasicMaterial({ 
+      color: 0xFFD700, 
+      wireframe: true,
+      transparent: true,
+      opacity: 0.3
+    });
+    const torus = new THREE.Mesh(geometry1, material1);
+    scene.add(torus);
+    
+    const geometry2 = new THREE.IcosahedronGeometry(7, 0);
+    const material2 = new THREE.MeshBasicMaterial({ 
+      color: 0x333333, 
+      wireframe: true,
+      transparent: true,
+      opacity: 0.2
+    });
+    const icosahedron = new THREE.Mesh(geometry2, material2);
+    scene.add(icosahedron);
+    
+    camera.position.z = 30;
+    
+    // Animation
+    function animate() {
+      requestAnimationFrame(animate);
+      
+      torus.rotation.x += 0.005;
+      torus.rotation.y += 0.008;
+      
+      icosahedron.rotation.x -= 0.003;
+      icosahedron.rotation.y -= 0.005;
+      
+      renderer.render(scene, camera);
+    }
+    
+    animate();
+    
+    // Handle window resize
+    window.addEventListener('resize', function() {
+      camera.aspect = container.clientWidth / container.clientHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(container.clientWidth, container.clientHeight);
+    });
+  }
+  
+  // Anime.js Animations
+  function animateElements() {
+    // Animate the main title
+    anime({
+      targets: '.main-title',
+      translateY: [-50, 0],
+      opacity: [0, 1],
+      duration: 1200,
+      easing: 'easeOutExpo',
+      delay: 300
+    });
+    
+    // Animate the description
+    anime({
+      targets: '.description',
+      translateY: [30, 0],
+      opacity: [0, 1],
+      duration: 1000,
+      easing: 'easeOutExpo',
+      delay: 600
+    });
+    
+    // Animate service cards
+    anime({
+      targets: '.service-card',
+      translateY: [40, 0],
+      opacity: [0, 1],
+      duration: 800,
+      easing: 'easeOutExpo',
+      delay: anime.stagger(150),
+    });
+    
+    // Animate floating cards
+    anime({
+      targets: '.floating-card',
+      translateY: [60, 0],
+      opacity: [0, 1],
+      duration: 1000,
+      easing: 'easeOutExpo',
+      delay: anime.stagger(200),
+    });
+    
+    // Animate CTA section
+    anime({
+      targets: '.cta-section',
+      translateY: [40, 0],
+      opacity: [0, 1],
+      duration: 900,
+      easing: 'easeOutExpo',
+      delay: 1200
+    });
+    
+    // Continuous floating animation for cards
+    anime({
+      targets: '.card-1',
+      translateY: [
+        { value: -10, duration: 1500 },
+        { value: 0, duration: 1500 }
+      ],
+      loop: true,
+      easing: 'easeInOutSine'
+    });
+    
+    anime({
+      targets: '.card-2',
+      translateY: [
+        { value: -15, duration: 2000 },
+        { value: 0, duration: 2000 }
+      ],
+      loop: true,
+      easing: 'easeInOutSine',
+      delay: 500
+    });
+    
+    anime({
+      targets: '.card-3',
+      translateY: [
+        { value: -12, duration: 1800 },
+        { value: 0, duration: 1800 }
+      ],
+      loop: true,
+      easing: 'easeInOutSine',
+      delay: 1000
+    });
+    
+    // Highlight animation
+    anime({
+      targets: '.highlight',
+      scale: [1, 1.05, 1],
+      duration: 2000,
+      loop: true,
+      easing: 'easeInOutSine',
+      direction: 'alternate'
+    });
+  }
+  
+  // Add hover effects with GSAP
+  document.querySelectorAll('.service-card').forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      gsap.to(card, { 
+        duration: 0.3, 
+        y: -5, 
+        boxShadow: '0 10px 25px rgba(0,0,0,0.1)',
+        ease: 'power2.out'
+      });
+    });
+    
+    card.addEventListener('mouseleave', () => {
+      gsap.to(card, { 
+        duration: 0.3, 
+        y: 0, 
+        boxShadow: '0 5px 15px rgba(0,0,0,0.05)',
+        ease: 'power2.out'
+      });
+    });
+  });
+</script>
