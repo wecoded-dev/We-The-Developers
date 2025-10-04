@@ -1,749 +1,1302 @@
-<!-- Hire Section for We The Developers Agency -->
-<section id="hire-section" class="hire-section">
-  <!-- Background Elements -->
-  <div id="particles-js"></div>
-  <div class="background-shapes">
-    <div class="shape shape-1"></div>
-    <div class="shape shape-2"></div>
-    <div class="shape shape-3"></div>
-  </div>
-  
-  <!-- Main Content -->
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6">
-        <div class="content-wrapper">
-          <div class="badge">Hire Us</div>
-          <h1 class="main-title">Let's Build Something <span class="highlight">Amazing</span> Together</h1>
-          <p class="description">
-            At <strong>We The Developers</strong>, we transform ideas into stunning digital experiences. 
-            Our expertise in <span class="highlight-text">graphics design</span> and <span class="highlight-text">front-end development</span> 
-            helps businesses stand out with professional designs and cutting-edge websites.
-          </p>
-          
-          <div class="services-section">
-            <h3>Our Services</h3>
-            <div class="services-grid">
-              <div class="service-card">
-                <i class="material-icons">design_services</i>
-                <h4>Professional Documents</h4>
-                <p>Business reports, presentations, and all types of professional documents</p>
-              </div>
-              <div class="service-card">
-                <i class="material-icons">videocam</i>
-                <h4>Promotional Videos</h4>
-                <p>Engaging video content that captures your brand's essence</p>
-              </div>
-              <div class="service-card">
-                <i class="material-icons">web</i>
-                <h4>Front-End Development</h4>
-                <p>Responsive, modern websites with exceptional user experience</p>
-              </div>
-              <div class="service-card">
-                <i class="material-icons">palette</i>
-                <h4>Creative Designs</h4>
-                <p>Logos, branding materials, and all your design needs</p>
-              </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>We The Developers | Premium Design & Development Agency | Hire Experts</title>
+    <meta name="description" content="We The Developers - Award-winning design & development agency. Transform your business with premium graphics, web development & video production. Contact support@aquascript.xyz">
+    <meta name="keywords" content="web development, graphic design, front-end development, video production, professional design, business branding, digital agency">
+    <meta name="author" content="We The Developers">
+    <meta property="og:title" content="We The Developers | Premium Design & Development Agency">
+    <meta property="og:description" content="Transform your business with premium graphics, web development & video production services">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://we-the-developers.vercel.app/hire">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "We The Developers",
+        "description": "Premium design and development agency specializing in graphics design, front-end development, and video production",
+        "url": "https://we-the-developers.vercel.app",
+        "telephone": "+1-555-0123",
+        "email": "support@aquascript.xyz",
+        "areaServed": "Worldwide",
+        "serviceType": ["Graphic Design", "Web Development", "Video Production"],
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Design & Development Services",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Premium Graphics Design",
+                        "description": "Professional document design, branding, marketing materials and visual identity systems"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Advanced Front-end Development",
+                        "description": "Responsive web applications, interactive interfaces, and performance-optimized solutions"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Professional Video Production",
+                        "description": "Engaging promotional videos, corporate presentations, and animated content"
+                    }
+                }
+            ]
+        }
+    }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Google Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Particles.js -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
+    <!-- Anime.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    
+    <!-- Lenis.js -->
+    <script src="https://unpkg.com/lenis@1.0.45/dist/lenis.min.js"></script>
+    
+    <!-- Beer CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/beercss@2.3.8/dist/cdn/beer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/beercss@2.3.8/dist/cdn/beer.min.js"></script>
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/TextPlugin.min.js"></script>
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <style>
+        :root {
+            --primary-black: #121212;
+            --primary-yellow: #ffc107;
+            --gold-yellow: #ffd700;
+            --premium-gold: #ffb700;
+            --primary-white: #ffffff;
+            --light-gray: #f8f9fa;
+            --medium-gray: #e9ecef;
+            --text-gray: #6c757d;
+            --card-bg: rgba(255, 255, 255, 0.92);
+            --glass-bg: rgba(255, 255, 255, 0.15);
+            --glass-border: rgba(255, 255, 255, 0.25);
+            --shadow-soft: 0 8px 32px rgba(0, 0, 0, 0.08);
+            --shadow-medium: 0 15px 40px rgba(0, 0, 0, 0.12);
+            --shadow-strong: 0 25px 50px rgba(0, 0, 0, 0.18);
+            --shadow-gold: 0 10px 30px rgba(255, 193, 7, 0.25);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f8f9fa 0%, #f1f3f4 50%, #e8eaed 100%);
+            color: var(--primary-black);
+            overflow-x: hidden;
+            line-height: 1.7;
+        }
+        
+        .hire-section {
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 120px 0;
+            overflow: hidden;
+        }
+        
+        /* Advanced Background Effects */
+        .background-effects {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+        
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+        
+        #three-canvas {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+        }
+        
+        .gradient-overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 15% 70%, rgba(255, 215, 0, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 85% 30%, rgba(255, 193, 7, 0.08) 0%, transparent 40%),
+                radial-gradient(circle at 50% 20%, rgba(255, 183, 0, 0.05) 0%, transparent 30%);
+            z-index: 3;
+        }
+        
+        .floating-shapes {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 4;
+        }
+        
+        .shape {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(50px);
+            opacity: 0.2;
+            animation: float 25s infinite ease-in-out;
+        }
+        
+        .shape-1 {
+            width: 500px;
+            height: 500px;
+            background: var(--premium-gold);
+            top: -250px;
+            right: -250px;
+            animation-delay: 0s;
+        }
+        
+        .shape-2 {
+            width: 400px;
+            height: 400px;
+            background: var(--primary-yellow);
+            bottom: -200px;
+            left: -200px;
+            animation-delay: 8s;
+        }
+        
+        .shape-3 {
+            width: 300px;
+            height: 300px;
+            background: var(--gold-yellow);
+            top: 15%;
+            right: 8%;
+            animation-delay: 16s;
+        }
+        
+        .shape-4 {
+            width: 250px;
+            height: 250px;
+            background: var(--premium-gold);
+            bottom: 25%;
+            left: 4%;
+            animation-delay: 12s;
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg) scale(1);
+            }
+            25% {
+                transform: translateY(-40px) rotate(90deg) scale(1.05);
+            }
+            50% {
+                transform: translateY(30px) rotate(180deg) scale(1.1);
+            }
+            75% {
+                transform: translateY(-20px) rotate(270deg) scale(1.05);
+            }
+        }
+        
+        /* Content Styling */
+        .content-wrapper {
+            position: relative;
+            z-index: 10;
+        }
+        
+        .agency-name {
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            font-size: 5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-black);
+            position: relative;
+            display: inline-block;
+            line-height: 1.1;
+            text-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .agency-name::after {
+            content: '';
+            position: absolute;
+            bottom: -18px;
+            left: 0;
+            width: 150px;
+            height: 6px;
+            background: linear-gradient(90deg, var(--primary-yellow), var(--premium-gold), var(--gold-yellow));
+            border-radius: 6px;
+            box-shadow: 0 5px 15px rgba(255, 193, 7, 0.3);
+        }
+        
+        .premium-tag {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary-yellow), var(--premium-gold));
+            color: var(--primary-black);
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-left: 20px;
+            vertical-align: super;
+            box-shadow: 0 5px 15px rgba(255, 193, 7, 0.3);
+            animation: pulse-glow 3s infinite ease-in-out;
+        }
+        
+        @keyframes pulse-glow {
+            0%, 100% {
+                box-shadow: 0 5px 15px rgba(255, 193, 7, 0.3);
+            }
+            50% {
+                box-shadow: 0 5px 25px rgba(255, 193, 7, 0.5);
+            }
+        }
+        
+        .section-subtitle {
+            font-size: 1.5rem;
+            color: var(--text-gray);
+            margin-bottom: 3.5rem;
+            max-width: 800px;
+            font-weight: 400;
+            line-height: 1.8;
+        }
+        
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 50px;
+            margin-bottom: 5rem;
+        }
+        
+        .service-card {
+            background: var(--card-bg);
+            border-radius: 25px;
+            padding: 45px 35px;
+            box-shadow: var(--shadow-soft);
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(15px);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255, 193, 7, 0.05) 0%, rgba(255, 183, 0, 0.05) 100%);
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.6s ease;
+        }
+        
+        .service-card:hover::before {
+            opacity: 1;
+        }
+        
+        .service-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 6px;
+            background: linear-gradient(90deg, var(--primary-yellow), var(--premium-gold), var(--gold-yellow));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.6s ease;
+        }
+        
+        .service-card:hover::after {
+            transform: scaleX(1);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-20px) scale(1.03);
+            box-shadow: var(--shadow-strong);
+        }
+        
+        .service-icon-container {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary-yellow), var(--premium-gold));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+            box-shadow: 0 15px 30px rgba(255, 193, 7, 0.3);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+        
+        .service-card:hover .service-icon-container {
+            transform: rotate(15deg) scale(1.1);
+            box-shadow: 0 20px 40px rgba(255, 193, 7, 0.4);
+        }
+        
+        .service-icon {
+            font-size: 2.8rem;
+            color: var(--primary-white);
+            z-index: 1;
+        }
+        
+        .service-title {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            color: var(--primary-black);
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.3;
+        }
+        
+        .service-description {
+            color: var(--text-gray);
+            line-height: 1.9;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .service-features {
+            margin-top: 2rem;
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .service-features li {
+            padding: 10px 0;
+            color: var(--text-gray);
+            position: relative;
+            padding-left: 35px;
+            font-size: 1.05rem;
+            transition: all 0.3s ease;
+        }
+        
+        .service-features li:hover {
+            color: var(--primary-black);
+            transform: translateX(5px);
+        }
+        
+        .service-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--premium-gold);
+            font-weight: bold;
+            font-size: 1.2rem;
+            width: 25px;
+            height: 25px;
+            background: rgba(255, 193, 7, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .cta-container {
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .hire-cta {
+            background: linear-gradient(135deg, var(--primary-yellow), var(--premium-gold));
+            color: var(--primary-black);
+            padding: 22px 60px;
+            border-radius: 70px;
+            font-weight: 800;
+            font-size: 1.3rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: var(--shadow-gold);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .hire-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 100%;
+            background: var(--primary-black);
+            transition: all 0.5s ease;
+            z-index: -1;
+        }
+        
+        .hire-cta:hover::before {
+            width: 100%;
+        }
+        
+        .hire-cta:hover {
+            color: var(--primary-white);
+            transform: translateY(-8px) scale(1.08);
+            box-shadow: 0 20px 45px rgba(255, 193, 7, 0.6);
+            letter-spacing: 1.5px;
+        }
+        
+        .contact-info {
+            margin-top: 4rem;
+            padding-top: 3rem;
+            border-top: 1px solid var(--medium-gray);
+        }
+        
+        .contact-text {
+            font-size: 1.3rem;
+            color: var(--text-gray);
+            margin-bottom: 1rem;
+            font-weight: 500;
+        }
+        
+        .contact-email {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary-black);
+            text-decoration: none;
+            transition: all 0.4s ease;
+            position: relative;
+            display: inline-block;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .contact-email::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-yellow), var(--premium-gold));
+            transition: width 0.4s ease;
+        }
+        
+        .contact-email:hover {
+            color: var(--primary-yellow);
+        }
+        
+        .contact-email:hover::after {
+            width: 100%;
+        }
+        
+        /* Floating Particles */
+        .floating-elements {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 5;
+            pointer-events: none;
+        }
+        
+        .floating-element {
+            position: absolute;
+            border-radius: 50%;
+            background: var(--primary-yellow);
+            opacity: 0.4;
+            animation: floatElement 20s infinite linear;
+            filter: blur(1px);
+        }
+        
+        @keyframes floatElement {
+            0% {
+                transform: translateY(0) rotate(0deg) scale(0.5);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.4;
+            }
+            90% {
+                opacity: 0.4;
+            }
+            100% {
+                transform: translateY(-120vh) rotate(360deg) scale(1.5);
+                opacity: 0;
+            }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1400px) {
+            .agency-name {
+                font-size: 4.5rem;
+            }
+        }
+        
+        @media (max-width: 1200px) {
+            .agency-name {
+                font-size: 4rem;
+            }
+            
+            .services-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .agency-name {
+                font-size: 3.5rem;
+            }
+            
+            .section-subtitle {
+                font-size: 1.3rem;
+            }
+            
+            .service-card {
+                padding: 35px 25px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hire-section {
+                padding: 100px 0;
+            }
+            
+            .agency-name {
+                font-size: 3rem;
+            }
+            
+            .section-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .service-title {
+                font-size: 1.8rem;
+            }
+            
+            .hire-cta {
+                padding: 20px 50px;
+                font-size: 1.2rem;
+            }
+            
+            .contact-email {
+                font-size: 1.5rem;
+            }
+            
+            .premium-tag {
+                display: block;
+                margin: 15px 0 0 0;
+                width: fit-content;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .agency-name {
+                font-size: 2.5rem;
+            }
+            
+            .service-title {
+                font-size: 1.6rem;
+            }
+            
+            .hire-cta {
+                padding: 18px 40px;
+                font-size: 1.1rem;
+            }
+            
+            .contact-email {
+                font-size: 1.3rem;
+            }
+            
+            .services-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Premium Glow Effects */
+        .glow {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 193, 7, 0.25) 0%, rgba(255, 193, 7, 0) 70%);
+            filter: blur(30px);
+            z-index: 0;
+            animation: pulse 10s infinite ease-in-out;
+        }
+        
+        .glow-1 {
+            width: 400px;
+            height: 400px;
+            top: 10%;
+            left: 5%;
+            animation-delay: 0s;
+        }
+        
+        .glow-2 {
+            width: 350px;
+            height: 350px;
+            bottom: 10%;
+            right: 5%;
+            animation-delay: 5s;
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 0.6;
+            }
+            50% {
+                transform: scale(1.3);
+                opacity: 0.8;
+            }
+        }
+        
+        /* Achievement Badges */
+        .achievement-badges {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 3rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .badge {
+            background: var(--card-bg);
+            padding: 15px 25px;
+            border-radius: 15px;
+            box-shadow: var(--shadow-soft);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: all 0.4s ease;
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(10px);
+        }
+        
+        .badge:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-medium);
+        }
+        
+        .badge-icon {
+            color: var(--premium-gold);
+            font-size: 1.8rem;
+        }
+        
+        .badge-text {
+            font-weight: 600;
+            color: var(--primary-black);
+        }
+        
+        .badge-subtext {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+        }
+    </style>
+</head>
+<body>
+    <!-- Ultra Premium Hire Section -->
+    <section class="hire-section">
+        <!-- Advanced Background Effects -->
+        <div class="background-effects">
+            <div id="particles-js"></div>
+            <div id="three-canvas"></div>
+            <div class="gradient-overlay"></div>
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
             </div>
-          </div>
-          
-          <div class="cta-section">
-            <h3>Ready to elevate your business?</h3>
-            <p>Contact us today to discuss your project</p>
-            <div class="contact-info">
-              <i class="material-icons">email</i>
-              <span>support@aquascript.xyz</span>
-            </div>
-            <button class="cta-button">
-              <span>Get Us Hired</span>
-              <i class="material-icons">arrow_forward</i>
-            </button>
-          </div>
+            <div class="glow glow-1"></div>
+            <div class="glow glow-2"></div>
         </div>
-      </div>
-      
-      <div class="col-md-6">
-        <div class="visual-section">
-          <div class="floating-card card-1">
-            <div class="card-icon">
-              <i class="material-icons">code</i>
+        
+        <!-- Floating Elements -->
+        <div class="floating-elements" id="floating-elements"></div>
+        
+        <div class="container content-wrapper">
+            <div class="row justify-content-center">
+                <div class="col-lg-11 col-xl-10">
+                    <h1 class="agency-name">
+                        We The Developers
+                        <span class="premium-tag">PREMIUM AGENCY</span>
+                    </h1>
+                    <p class="section-subtitle">
+                        We are an award-winning design and development agency that transforms businesses through exceptional digital experiences. Our team of creative experts delivers premium graphics design, cutting-edge web development, and professional video production that drives measurable results and elevates your brand above the competition.
+                    </p>
+                    
+                    <!-- Achievement Badges -->
+                    <div class="achievement-badges">
+                        <div class="badge">
+                            <span class="material-icons-round badge-icon">workspace_premium</span>
+                            <div>
+                                <div class="badge-text">500+ Projects</div>
+                                <div class="badge-subtext">Successfully Delivered</div>
+                            </div>
+                        </div>
+                        <div class="badge">
+                            <span class="material-icons-round badge-icon">groups</span>
+                            <div>
+                                <div class="badge-text">Expert Team</div>
+                                <div class="badge-subtext">Industry Professionals</div>
+                            </div>
+                        </div>
+                        <div class="badge">
+                            <span class="material-icons-round badge-icon">schedule</span>
+                            <div>
+                                <div class="badge-text">Fast Delivery</div>
+                                <div class="badge-subtext">On-Time Completion</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="services-container">
+                        <!-- Graphics Design Service -->
+                        <div class="service-card">
+                            <div class="service-icon-container">
+                                <span class="material-icons-round service-icon">design_services</span>
+                            </div>
+                            <h3 class="service-title">Premium Graphics Design Solutions</h3>
+                            <p class="service-description">
+                                Transform your brand identity with our premium design services. We create stunning visual assets that communicate your message effectively and leave a lasting impression on your audience. Our design philosophy combines aesthetic excellence with strategic thinking to deliver results that matter.
+                            </p>
+                            <ul class="service-features">
+                                <li>Professional Corporate Document Design</li>
+                                <li>Comprehensive Brand Identity Systems</li>
+                                <li>Marketing & Promotional Materials</li>
+                                <li>Social Media Graphics & Campaigns</li>
+                                <li>Print & Digital Publication Design</li>
+                                <li>Packaging & Product Design</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Front-end Development Service -->
+                        <div class="service-card">
+                            <div class="service-icon-container">
+                                <span class="material-icons-round service-icon">code</span>
+                            </div>
+                            <h3 class="service-title">Advanced Front-end Development</h3>
+                            <p class="service-description">
+                                Build high-performance, responsive websites and applications with our cutting-edge development expertise. We leverage the latest technologies to create seamless user experiences that drive engagement and conversion. Our code is clean, scalable, and optimized for peak performance.
+                            </p>
+                            <ul class="service-features">
+                                <li>Responsive Web Design & Development</li>
+                                <li>Interactive User Interface Design</li>
+                                <li>Performance Optimization & SEO</li>
+                                <li>Cross-Browser Compatibility</li>
+                                <li>Progressive Web Applications</li>
+                                <li>E-commerce Solutions</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Video Production Service -->
+                        <div class="service-card">
+                            <div class="service-icon-container">
+                                <span class="material-icons-round service-icon">movie_creation</span>
+                            </div>
+                            <h3 class="service-title">Professional Video Production</h3>
+                            <p class="service-description">
+                                Captivate your audience with professionally produced video content that tells your story and drives action. From concept development to final delivery, we ensure every frame reflects your brand's excellence and communicates your message with maximum impact.
+                            </p>
+                            <ul class="service-features">
+                                <li>Brand Promotional Videos</li>
+                                <li>Product Demonstration Videos</li>
+                                <li>Corporate Presentations</li>
+                                <li>Social Media Video Content</li>
+                                <li>Animation & Motion Graphics</li>
+                                <li>Video Editing & Post-Production</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="cta-container">
+                        <a href="mailto:support@aquascript.xyz" class="hire-cta">
+                            <span class="material-icons-round" style="margin-right: 15px;">rocket_launch</span>
+                            Start Your Premium Project
+                        </a>
+                        
+                        <div class="contact-info">
+                            <p class="contact-text">Ready to transform your digital presence with premium solutions?</p>
+                            <a href="mailto:support@aquascript.xyz" class="contact-email">support@aquascript.xyz</a>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <h4>Clean Code</h4>
-            <p>Modern, efficient front-end solutions</p>
-          </div>
-          
-          <div class="floating-card card-2">
-            <div class="card-icon">
-              <i class="material-icons">brush</i>
-            </div>
-            <h4>Beautiful Designs</h4>
-            <p>Visually stunning graphics</p>
-          </div>
-          
-          <div class="floating-card card-3">
-            <div class="card-icon">
-              <i class="material-icons">devices</i>
-            </div>
-            <h4>Responsive</h4>
-            <p>Perfect on all devices</p>
-          </div>
-          
-          <div class="animation-container" id="animation-container"></div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- Include all required libraries -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/lenis@1.0.7/dist/lenis.min.js"></script>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
-
-<!-- Styles -->
-<style>
-  /* Import Google Fonts */
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap');
-  @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
-  @import url('https://cdn.jsdelivr.net/npm/aos@2.3.1/dist/aos.css');
-  
-  /* Base Styles */
-  .hire-section {
-    position: relative;
-    padding: 100px 0;
-    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-    overflow: hidden;
-    font-family: 'Poppins', sans-serif;
-    color: #333;
-  }
-  
-  /* Background Shapes */
-  .background-shapes .shape {
-    position: absolute;
-    border-radius: 50%;
-    opacity: 0.1;
-  }
-  
-  .background-shapes .shape-1 {
-    width: 300px;
-    height: 300px;
-    background: #FFD700;
-    top: -150px;
-    right: -150px;
-  }
-  
-  .background-shapes .shape-2 {
-    width: 200px;
-    height: 200px;
-    background: #333;
-    bottom: -100px;
-    left: -100px;
-  }
-  
-  .background-shapes .shape-3 {
-    width: 150px;
-    height: 150px;
-    background: #FFD700;
-    top: 50%;
-    right: 10%;
-  }
-  
-  /* Content Styles */
-  .content-wrapper {
-    position: relative;
-    z-index: 10;
-  }
-  
-  .badge {
-    display: inline-block;
-    background: #FFD700;
-    color: #333;
-    padding: 8px 16px;
-    border-radius: 30px;
-    font-weight: 600;
-    font-size: 14px;
-    margin-bottom: 20px;
-    letter-spacing: 1px;
-  }
-  
-  .main-title {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 3.5rem;
-    line-height: 1.2;
-    margin-bottom: 25px;
-    color: #222;
-  }
-  
-  .highlight {
-    color: #FFD700;
-    position: relative;
-    display: inline-block;
-  }
-  
-  .highlight:after {
-    content: '';
-    position: absolute;
-    bottom: 5px;
-    left: 0;
-    width: 100%;
-    height: 8px;
-    background: rgba(255, 215, 0, 0.3);
-    z-index: -1;
-  }
-  
-  .description {
-    font-size: 1.2rem;
-    line-height: 1.7;
-    margin-bottom: 40px;
-    color: #555;
-  }
-  
-  .highlight-text {
-    color: #FFD700;
-    font-weight: 600;
-  }
-  
-  /* Services Section */
-  .services-section {
-    margin: 50px 0;
-  }
-  
-  .services-section h3 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    font-size: 1.8rem;
-    margin-bottom: 25px;
-    color: #222;
-  }
-  
-  .services-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-  }
-  
-  .service-card {
-    background: white;
-    border-radius: 12px;
-    padding: 25px 20px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-  }
-  
-  .service-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  }
-  
-  .service-card i {
-    font-size: 2.5rem;
-    color: #FFD700;
-    margin-bottom: 15px;
-  }
-  
-  .service-card h4 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    color: #222;
-  }
-  
-  .service-card p {
-    font-size: 0.95rem;
-    color: #666;
-    line-height: 1.5;
-  }
-  
-  /* CTA Section */
-  .cta-section {
-    background: white;
-    border-radius: 16px;
-    padding: 30px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-    margin-top: 40px;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-  }
-  
-  .cta-section h3 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: #222;
-  }
-  
-  .cta-section p {
-    color: #666;
-    margin-bottom: 20px;
-  }
-  
-  .contact-info {
-    display: flex;
-    align-items: center;
-    margin-bottom: 25px;
-    padding: 15px;
-    background: rgba(255, 215, 0, 0.1);
-    border-radius: 10px;
-  }
-  
-  .contact-info i {
-    color: #FFD700;
-    margin-right: 10px;
-    font-size: 1.5rem;
-  }
-  
-  .contact-info span {
-    font-weight: 500;
-    color: #333;
-  }
-  
-  .cta-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #FFD700;
-    color: #333;
-    border: none;
-    padding: 15px 30px;
-    border-radius: 50px;
-    font-weight: 600;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
-    width: 100%;
-  }
-  
-  .cta-button:hover {
-    background: #ffc400;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(255, 215, 0, 0.4);
-  }
-  
-  .cta-button i {
-    margin-left: 10px;
-    transition: transform 0.3s ease;
-  }
-  
-  .cta-button:hover i {
-    transform: translateX(5px);
-  }
-  
-  /* Visual Section */
-  .visual-section {
-    position: relative;
-    height: 600px;
-  }
-  
-  .floating-card {
-    position: absolute;
-    background: white;
-    border-radius: 16px;
-    padding: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    width: 200px;
-    text-align: center;
-    z-index: 5;
-    border: 1px solid rgba(0, 0, 0, 0.05);
-  }
-  
-  .card-1 {
-    top: 10%;
-    right: 10%;
-  }
-  
-  .card-2 {
-    top: 40%;
-    right: 30%;
-  }
-  
-  .card-3 {
-    bottom: 20%;
-    right: 15%;
-  }
-  
-  .card-icon {
-    width: 60px;
-    height: 60px;
-    background: rgba(255, 215, 0, 0.15);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 15px;
-  }
-  
-  .card-icon i {
-    font-size: 2rem;
-    color: #FFD700;
-  }
-  
-  .floating-card h4 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    font-size: 1.1rem;
-    margin-bottom: 8px;
-    color: #222;
-  }
-  
-  .floating-card p {
-    font-size: 0.9rem;
-    color: #666;
-  }
-  
-  .animation-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-  }
-  
-  /* Particles Container */
-  #particles-js {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1;
-  }
-  
-  /* Responsive Styles */
-  @media (max-width: 992px) {
-    .main-title {
-      font-size: 2.8rem;
-    }
-    
-    .services-grid {
-      grid-template-columns: 1fr;
-    }
-    
-    .visual-section {
-      height: 400px;
-      margin-top: 50px;
-    }
-    
-    .floating-card {
-      width: 180px;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .hire-section {
-      padding: 70px 0;
-    }
-    
-    .main-title {
-      font-size: 2.3rem;
-    }
-    
-    .description {
-      font-size: 1.1rem;
-    }
-  }
-</style>
-
-<!-- JavaScript -->
-<script>
-  // Initialize Lenis for smooth scrolling
-  const lenis = new Lenis({
-    duration: 1.2,
-    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-    direction: 'vertical',
-    gestureDirection: 'vertical',
-    smooth: true,
-    smoothTouch: false,
-    touchMultiplier: 2,
-  });
-  
-  function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
-  }
-  
-  requestAnimationFrame(raf);
-  
-  // Initialize Particles.js
-  document.addEventListener('DOMContentLoaded', function() {
-    if (typeof particlesJS !== 'undefined') {
-      particlesJS('particles-js', {
-        particles: {
-          number: {
-            value: 40,
-            density: {
-              enable: true,
-              value_area: 800
-            }
-          },
-          color: {
-            value: "#FFD700"
-          },
-          shape: {
-            type: "circle",
-            stroke: {
-              width: 0,
-              color: "#000000"
-            }
-          },
-          opacity: {
-            value: 0.3,
-            random: true,
-            anim: {
-              enable: true,
-              speed: 1,
-              opacity_min: 0.1,
-              sync: false
-            }
-          },
-          size: {
-            value: 3,
-            random: true,
-            anim: {
-              enable: true,
-              speed: 2,
-              size_min: 0.1,
-              sync: false
-            }
-          },
-          line_linked: {
-            enable: true,
-            distance: 150,
-            color: "#FFD700",
-            opacity: 0.2,
-            width: 1
-          },
-          move: {
-            enable: true,
-            speed: 1,
-            direction: "none",
-            random: true,
-            straight: false,
-            out_mode: "out",
-            bounce: false,
-            attract: {
-              enable: false,
-              rotateX: 600,
-              rotateY: 1200
-            }
-          }
-        },
-        interactivity: {
-          detect_on: "canvas",
-          events: {
-            onhover: {
-              enable: true,
-              mode: "grab"
+    <script>
+        // Initialize Lenis for ultra-smooth scrolling
+        const lenis = new Lenis({
+            duration: 1.6,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            smooth: true,
+            smoothTouch: false,
+            touchMultiplier: 2,
+        });
+        
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+        
+        requestAnimationFrame(raf);
+        
+        // Enhanced Particles.js Configuration
+        particlesJS('particles-js', {
+            particles: {
+                number: {
+                    value: 150,
+                    density: {
+                        enable: true,
+                        value_area: 1200
+                    }
+                },
+                color: {
+                    value: ["#ffc107", "#ffd700", "#ffb700", "#ffed4e"]
+                },
+                shape: {
+                    type: "circle",
+                    stroke: {
+                        width: 0,
+                        color: "#000000"
+                    }
+                },
+                opacity: {
+                    value: 0.5,
+                    random: true,
+                    anim: {
+                        enable: true,
+                        speed: 2,
+                        opacity_min: 0.1,
+                        sync: false
+                    }
+                },
+                size: {
+                    value: 5,
+                    random: true,
+                    anim: {
+                        enable: true,
+                        speed: 4,
+                        size_min: 0.1,
+                        sync: false
+                    }
+                },
+                line_linked: {
+                    enable: true,
+                    distance: 200,
+                    color: "#ffc107",
+                    opacity: 0.4,
+                    width: 2
+                },
+                move: {
+                    enable: true,
+                    speed: 2,
+                    direction: "none",
+                    random: true,
+                    straight: false,
+                    out_mode: "out",
+                    bounce: false,
+                    attract: {
+                        enable: true,
+                        rotateX: 800,
+                        rotateY: 1600
+                    }
+                }
             },
-            onclick: {
-              enable: true,
-              mode: "push"
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: {
+                        enable: true,
+                        mode: "grab"
+                    },
+                    onclick: {
+                        enable: true,
+                        mode: "repulse"
+                    },
+                    resize: true
+                },
+                modes: {
+                    grab: {
+                        distance: 250,
+                        line_linked: {
+                            opacity: 1
+                        }
+                    },
+                    repulse: {
+                        distance: 200,
+                        duration: 0.6
+                    }
+                }
             },
-            resize: true
-          },
-          modes: {
-            grab: {
-              distance: 140,
-              line_linked: {
-                opacity: 0.4
-              }
-            },
-            push: {
-              particles_nb: 4
+            retina_detect: true
+        });
+        
+        // Advanced Three.js Scene
+        let scene, camera, renderer, group;
+        
+        function initThree() {
+            // Create scene
+            scene = new THREE.Scene();
+            scene.background = null;
+            
+            // Create camera
+            camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            camera.position.z = 10;
+            
+            // Create renderer
+            renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.setClearColor(0x000000, 0);
+            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+            document.getElementById('three-canvas').appendChild(renderer.domElement);
+            
+            // Create group for multiple objects
+            group = new THREE.Group();
+            scene.add(group);
+            
+            // Create multiple premium geometries
+            const geometries = [
+                new THREE.TorusKnotGeometry(2, 0.5, 100, 16),
+                new THREE.OctahedronGeometry(1.8, 1),
+                new THREE.DodecahedronGeometry(1.6, 0)
+            ];
+            
+            const colors = [0xffc107, 0xffd700, 0xffb700];
+            
+            geometries.forEach((geom, index) => {
+                const material = new THREE.MeshBasicMaterial({ 
+                    color: colors[index],
+                    wireframe: true,
+                    transparent: true,
+                    opacity: 0.15
+                });
+                
+                const mesh = new THREE.Mesh(geom, material);
+                mesh.position.x = (index - 1) * 4;
+                mesh.rotation.x = Math.random() * Math.PI;
+                mesh.rotation.y = Math.random() * Math.PI;
+                group.add(mesh);
+            });
+            
+            // Add directional light for enhanced depth
+            const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
+            directionalLight.position.set(5, 5, 5);
+            scene.add(directionalLight);
+            
+            // Handle window resize
+            window.addEventListener('resize', onWindowResize, false);
+            
+            // Start animation
+            animate();
+        }
+        
+        function onWindowResize() {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        }
+        
+        function animate() {
+            requestAnimationFrame(animate);
+            
+            group.rotation.x += 0.004;
+            group.rotation.y += 0.006;
+            
+            group.children.forEach((child, index) => {
+                child.rotation.x += 0.008 * (index + 1);
+                child.rotation.y += 0.006 * (index + 1);
+                child.rotation.z += 0.004 * (index + 1);
+            });
+            
+            renderer.render(scene, camera);
+        }
+        
+        // Initialize Three.js when the page loads
+        window.addEventListener('load', initThree);
+        
+        // Create floating elements
+        function createFloatingElements() {
+            const container = document.getElementById('floating-elements');
+            const elementCount = 40;
+            
+            for (let i = 0; i < elementCount; i++) {
+                const element = document.createElement('div');
+                element.classList.add('floating-element');
+                
+                // Random properties for variety
+                const size = Math.random() * 12 + 4;
+                const left = Math.random() * 100;
+                const delay = Math.random() * 20;
+                const duration = Math.random() * 15 + 20;
+                const colorVariation = Math.random();
+                
+                element.style.width = `${size}px`;
+                element.style.height = `${size}px`;
+                element.style.left = `${left}%`;
+                element.style.animationDelay = `${delay}s`;
+                element.style.animationDuration = `${duration}s`;
+                
+                // Color variation
+                if (colorVariation < 0.33) {
+                    element.style.background = '#ffc107';
+                } else if (colorVariation < 0.66) {
+                    element.style.background = '#ffd700';
+                } else {
+                    element.style.background = '#ffb700';
+                }
+                
+                container.appendChild(element);
             }
-          }
-        },
-        retina_detect: true
-      });
-    }
-    
-    // Initialize Three.js animation
-    initThreeAnimation();
-    
-    // Animate elements with Anime.js
-    animateElements();
-  });
-  
-  // Three.js Animation
-  function initThreeAnimation() {
-    const container = document.getElementById('animation-container');
-    if (!container) return;
-    
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 0.1, 1000);
-    const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
-    
-    renderer.setSize(container.clientWidth, container.clientHeight);
-    renderer.setClearColor(0x000000, 0);
-    container.appendChild(renderer.domElement);
-    
-    // Create geometric shapes
-    const geometry1 = new THREE.TorusGeometry(10, 3, 16, 100);
-    const material1 = new THREE.MeshBasicMaterial({ 
-      color: 0xFFD700, 
-      wireframe: true,
-      transparent: true,
-      opacity: 0.3
-    });
-    const torus = new THREE.Mesh(geometry1, material1);
-    scene.add(torus);
-    
-    const geometry2 = new THREE.IcosahedronGeometry(7, 0);
-    const material2 = new THREE.MeshBasicMaterial({ 
-      color: 0x333333, 
-      wireframe: true,
-      transparent: true,
-      opacity: 0.2
-    });
-    const icosahedron = new THREE.Mesh(geometry2, material2);
-    scene.add(icosahedron);
-    
-    camera.position.z = 30;
-    
-    // Animation
-    function animate() {
-      requestAnimationFrame(animate);
-      
-      torus.rotation.x += 0.005;
-      torus.rotation.y += 0.008;
-      
-      icosahedron.rotation.x -= 0.003;
-      icosahedron.rotation.y -= 0.005;
-      
-      renderer.render(scene, camera);
-    }
-    
-    animate();
-    
-    // Handle window resize
-    window.addEventListener('resize', function() {
-      camera.aspect = container.clientWidth / container.clientHeight;
-      camera.updateProjectionMatrix();
-      renderer.setSize(container.clientWidth, container.clientHeight);
-    });
-  }
-  
-  // Anime.js Animations
-  function animateElements() {
-    // Animate the main title
-    anime({
-      targets: '.main-title',
-      translateY: [-50, 0],
-      opacity: [0, 1],
-      duration: 1200,
-      easing: 'easeOutExpo',
-      delay: 300
-    });
-    
-    // Animate the description
-    anime({
-      targets: '.description',
-      translateY: [30, 0],
-      opacity: [0, 1],
-      duration: 1000,
-      easing: 'easeOutExpo',
-      delay: 600
-    });
-    
-    // Animate service cards
-    anime({
-      targets: '.service-card',
-      translateY: [40, 0],
-      opacity: [0, 1],
-      duration: 800,
-      easing: 'easeOutExpo',
-      delay: anime.stagger(150),
-    });
-    
-    // Animate floating cards
-    anime({
-      targets: '.floating-card',
-      translateY: [60, 0],
-      opacity: [0, 1],
-      duration: 1000,
-      easing: 'easeOutExpo',
-      delay: anime.stagger(200),
-    });
-    
-    // Animate CTA section
-    anime({
-      targets: '.cta-section',
-      translateY: [40, 0],
-      opacity: [0, 1],
-      duration: 900,
-      easing: 'easeOutExpo',
-      delay: 1200
-    });
-    
-    // Continuous floating animation for cards
-    anime({
-      targets: '.card-1',
-      translateY: [
-        { value: -10, duration: 1500 },
-        { value: 0, duration: 1500 }
-      ],
-      loop: true,
-      easing: 'easeInOutSine'
-    });
-    
-    anime({
-      targets: '.card-2',
-      translateY: [
-        { value: -15, duration: 2000 },
-        { value: 0, duration: 2000 }
-      ],
-      loop: true,
-      easing: 'easeInOutSine',
-      delay: 500
-    });
-    
-    anime({
-      targets: '.card-3',
-      translateY: [
-        { value: -12, duration: 1800 },
-        { value: 0, duration: 1800 }
-      ],
-      loop: true,
-      easing: 'easeInOutSine',
-      delay: 1000
-    });
-    
-    // Highlight animation
-    anime({
-      targets: '.highlight',
-      scale: [1, 1.05, 1],
-      duration: 2000,
-      loop: true,
-      easing: 'easeInOutSine',
-      direction: 'alternate'
-    });
-  }
-  
-  // Add hover effects with GSAP
-  document.querySelectorAll('.service-card').forEach(card => {
-    card.addEventListener('mouseenter', () => {
-      gsap.to(card, { 
-        duration: 0.3, 
-        y: -5, 
-        boxShadow: '0 10px 25px rgba(0,0,0,0.1)',
-        ease: 'power2.out'
-      });
-    });
-    
-    card.addEventListener('mouseleave', () => {
-      gsap.to(card, { 
-        duration: 0.3, 
-        y: 0, 
-        boxShadow: '0 5px 15px rgba(0,0,0,0.05)',
-        ease: 'power2.out'
-      });
-    });
-  });
-</script>
+        }
+        
+        // Advanced GSAP Animations with TextPlugin
+        document.addEventListener('DOMContentLoaded', function() {
+            createFloatingElements();
+            
+            // Register GSAP plugins
+            gsap.registerPlugin(ScrollTrigger, TextPlugin);
+            
+            // GSAP Timeline for sequenced animations
+            const tl = gsap.timeline();
+            
+            // Animate agency name with text reveal
+            tl.fromTo('.agency-name', 
+                { y: -100, opacity: 0, scale: 0.8 },
+                { y: 0, opacity: 1, scale: 1, duration: 1.5, ease: "power3.out" }
+            )
+            .fromTo('.premium-tag', 
+                { scale: 0, rotation: -180 },
+                { scale: 1, rotation: 0, duration: 0.8, ease: "back.out(1.7)" },
+                "-=0.5"
+            )
+            .fromTo('.agency-name::after', 
+                { scaleX: 0 },
+                { scaleX: 1, duration: 1, ease: "power2.out" },
+                "-=0.7"
+            )
+            .fromTo('.section-subtitle', 
+                { y: 50, opacity: 0 },
+                { y: 0, opacity: 1, duration: 1.2, ease: "power2.out" },
+                "-=0.5"
+            )
+            .fromTo('.badge', 
+                { y: 40, opacity: 0, scale: 0.8 },
+                { y: 0, opacity: 1, scale: 1, duration: 0.8, stagger: 0.15, ease: "back.out(1.7)" },
+                "-=0.4"
+            )
+            .fromTo('.service-card', 
+                { y: 80, opacity: 0, rotationY: 20 },
+                { y: 0, opacity: 1, rotationY: 0, duration: 1.2, stagger: 0.25, ease: "power2.out" },
+                "-=0.5"
+            )
+            .fromTo('.hire-cta', 
+                { y: 40, opacity: 0, scale: 0.9 },
+                { y: 0, opacity: 1, scale: 1, duration: 1, ease: "back.out(1.7)" },
+                "-=0.3"
+            )
+            .fromTo('.contact-info', 
+                { y: 30, opacity: 0 },
+                { y: 0, opacity: 1, duration: 0.8, ease: "power2.out" },
+                "-=0.2"
+            );
+            
+            // ScrollTrigger animations for service cards
+            gsap.utils.toArray('.service-card').forEach(card => {
+                gsap.fromTo(card, {
+                    y: 100,
+                    opacity: 0.5,
+                    rotationX: 10
+                }, {
+                    y: 0,
+                    opacity: 1,
+                    rotationX: 0,
+                    duration: 1.2,
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 85%",
+                        end: "bottom 20%",
+                        toggleActions: "play none none reverse",
+                        markers: false
+                    }
+                });
+            });
+            
+            // Parallax effect for background elements
+            gsap.to('.floating-shapes', {
+                yPercent: -30,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: '.hire-section',
+                    start: "top bottom",
+                    end: "bottom top",
+                    scrub: 1.5
+                }
+            });
+            
+            // Continuous subtle animations
+            gsap.to('.premium-tag', {
+                y: -5,
+                duration: 2,
+                repeat: -1,
+                yoyo: true,
+                ease: "power1.inOut"
+            });
+        });
+        
+        // Enhanced Anime.js animations for micro-interactions
+        document.addEventListener('DOMContentLoaded', function() {
+            // Hover animations for service cards
+            $('.service-card').hover(
+                function() {
+                    anime({
+                        targets: this,
+                        scale: 1.05,
+                        duration: 500,
+                        easing: 'easeOutElastic(1, .6)'
+                    });
+                    
+                    // Animate icon container with enhanced effects
+                    anime({
+                        targets: $(this).find('.service-icon-container')[0],
+                        scale: 1.15,
+                        rotate: '1turn',
+                        duration: 600,
+                        easing: 'easeOutBack'
+                    });
+                    
+                    // Animate features list
+                    anime({
+                        targets: $(this).find('.service-features li'),
+                        translateX: 10,
+                        duration: 400,
+                        delay: anime.stagger(100),
+                        easing: 'easeOutQuad'
+                    });
+                },
+                function() {
+                    anime({
+                        targets: this,
+                        scale: 1,
+                        duration: 500,
+                        easing: 'easeOutElastic(1, .6)'
+                    });
+                    
+                    // Reset icon container
+                    anime({
+                        targets: $(this).find('.service-icon-container')[0],
+                        scale: 1,
+                        rotate: '0turn',
+                        duration: 400,
+                        easing: 'easeOutBack'
+                    });
+                    
+                    // Reset features list
+                    anime({
+                        targets: $(this).find('.service-features li'),
+                        translateX: 0,
+                        duration: 300,
+                        delay: anime.stagger(50),
+                        easing: 'easeOutQuad'
+                    });
+                }
+            );
+            
+            // Enhanced badge hover effects
+            $('.badge').hover(
+                function() {
+                    anime({
+                        targets: this,
+                        scale: 1.08,
+                        duration: 300,
+                        easing: 'easeOutBack'
+                    });
+                },
+                function() {
+                    anime({
+                        targets: this,
+                        scale: 1,
+                        duration: 300,
+                        easing: 'easeOutBack'
+                    });
+                }
+            );
+            
+            // Continuous subtle animation for shapes
+            anime({
+                targets: '.shape',
+                translateX: function() {
+                    return anime.random(-40, 40);
+                },
+                translateY: function() {
+                    return anime.random(-40, 40);
+                },
+                scale: function() {
+                    return anime.random(0.9, 1.1);
+                },
+                duration: 12000,
+                easing: 'easeInOutSine',
+                direction: 'alternate',
+                loop: true
+            });
+            
+            // Enhanced pulsing animation for CTA button
+            anime({
+                targets: '.hire-cta',
+                boxShadow: [
+                    '0 10px 30px rgba(255, 193, 7, 0.4)',
+                    '0 15px 40px rgba(255, 193, 7, 0.7)',
+                    '0 10px 30px rgba(255, 193, 7, 0.4)'
+                ],
+                scale: [1, 1.02, 1],
+                duration: 2500,
+                easing: 'easeInOutSine',
+                loop: true
+            });
+        });
+    </script>
+</body>
+</html>
